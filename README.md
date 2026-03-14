@@ -13,8 +13,8 @@ What It Does
 💬 Answers questions based on PDF content
 
 # Programming language :
-##frontend : html,css and jaascript 
-##backend : flask(python)
+## frontend : html,css and jaascript 
+## backend : flask(python)
 ## api: gemini api key 
 
 ![alt text](https://github.com/jeanluc-BIZIMANA/OPS_pdf_assistant/blob/master/screenshots/Screenshot%202026-03-01%20012729.png?raw=true)
