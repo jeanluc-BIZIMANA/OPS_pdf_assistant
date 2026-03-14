@@ -13,7 +13,7 @@ What It Does
 💬 Answers questions based on PDF content
 
 # Programming language :
-## frontend : html,css and jaascript 
+## frontend : html,css and javascript 
 ## backend : flask(python)
 ## api: gemini api key 
 
