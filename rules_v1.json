@@ -1,0 +1,218 @@
+[
+    {
+        "id": 1,
+        "conditions": [
+            [
+                "fievre",
+                true
+            ],
+            [
+                "frissons",
+                true
+            ],
+            [
+                "maux_de_tete",
+                true
+            ]
+        ],
+        "conclusion": [
+            "suspect_non_complique",
+            true
+        ],
+        "justification": "R1 : Fi\u00e8vre + frissons + maux de t\u00eate \u2192 suspicion paludisme non compliqu\u00e9"
+    },
+    {
+        "id": 2,
+        "conditions": [
+            [
+                "fievre",
+                true
+            ],
+            [
+                "sueurs",
+                true
+            ],
+            [
+                "fatigue_extreme",
+                true
+            ]
+        ],
+        "conclusion": [
+            "suspect",
+            true
+        ],
+        "justification": "R2 : Fi\u00e8vre + sueurs + fatigue \u2192 suspicion renforc\u00e9e"
+    },
+    {
+        "id": 3,
+        "conditions": [
+            [
+                "nausees",
+                true
+            ],
+            [
+                "vomissements",
+                true
+            ]
+        ],
+        "conclusion": [
+            "suspect",
+            true
+        ],
+        "justification": "R3 : Naus\u00e9es + vomissements \u2192 paludisme probable"
+    },
+    {
+        "id": 4,
+        "conditions": [
+            [
+                "douleurs_musculaires",
+                true
+            ],
+            [
+                "diarrhee",
+                true
+            ]
+        ],
+        "conclusion": [
+            "suspect",
+            true
+        ],
+        "justification": "R4 : Douleurs musculaires + diarrh\u00e9e \u2192 suspicion"
+    },
+    {
+        "id": 5,
+        "conditions": [
+            [
+                "confusion",
+                true
+            ]
+        ],
+        "conclusion": [
+            "suspect_severe",
+            true
+        ],
+        "justification": "R5 : Confusion \u2192 paludisme s\u00e9v\u00e8re (urgence)"
+    },
+    {
+        "id": 6,
+        "conditions": [
+            [
+                "anemie_severe",
+                true
+            ],
+            [
+                "dyspnee",
+                true
+            ]
+        ],
+        "conclusion": [
+            "suspect_severe",
+            true
+        ],
+        "justification": "R6 : An\u00e9mie + dyspn\u00e9e \u2192 forme s\u00e9v\u00e8re"
+    },
+    {
+        "id": 7,
+        "conditions": [
+            [
+                "ictere",
+                true
+            ],
+            [
+                "saignements",
+                true
+            ]
+        ],
+        "conclusion": [
+            "suspect_severe",
+            true
+        ],
+        "justification": "R7 : Ict\u00e8re + saignements \u2192 s\u00e9v\u00e8re possible"
+    },
+    {
+        "id": 8,
+        "conditions": [
+            [
+                "suspect_non_complique",
+                true
+            ],
+            [
+                "test_positif",
+                true
+            ]
+        ],
+        "conclusion": [
+            "confirme_non_complique",
+            true
+        ],
+        "justification": "R8 : Suspicion non compliqu\u00e9e + test positif \u2192 confirm\u00e9"
+    },
+    {
+        "id": 9,
+        "conditions": [
+            [
+                "suspect_severe",
+                true
+            ],
+            [
+                "test_positif",
+                true
+            ]
+        ],
+        "conclusion": [
+            "confirme_severe",
+            true
+        ],
+        "justification": "R9 : Suspicion s\u00e9v\u00e8re + test positif \u2192 s\u00e9v\u00e8re confirm\u00e9"
+    },
+    {
+        "id": 10,
+        "conditions": [
+            [
+                "fievre",
+                false
+            ]
+        ],
+        "conclusion": [
+            "paludisme_improbable",
+            true
+        ],
+        "justification": "R10 : Pas de fi\u00e8vre \u2192 improbable"
+    },
+    {
+        "id": 11,
+        "conditions": [
+            [
+                "test_positif",
+                false
+            ],
+            [
+                "fievre",
+                true
+            ]
+        ],
+        "conclusion": [
+            "autre_cause_probable",
+            true
+        ],
+        "justification": "R11 : Test n\u00e9gatif + fi\u00e8vre \u2192 autre cause"
+    },
+    {
+        "id": 12,
+        "conditions": [
+            [
+                "suspect",
+                true
+            ],
+            [
+                "test_positif",
+                true
+            ]
+        ],
+        "conclusion": [
+            "confirme",
+            true
+        ],
+        "justification": "R12 : Suspicion g\u00e9n\u00e9rale + test positif \u2192 confirm\u00e9"
+    }
+]

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <script  src="{{ url_for('static', filename='js/main.js')}}"></script>
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>OPS PDF Assistant</title>
+</head>
+<body>
+    <section name="navigation ">
+        <div class="top-nav">
+            <div class="left-top"> <a href="#welco"> 📃​ OPS Assistant</a></div>
+            <div class="right-top">
+            <a href="#welco">Contact</a>
+            <a href="#try"> Try it </a>
+            
+           
+           
+
+            
+            </div>
+            <div class="respo">
+                 <a href="#dropdown"  href="javascript:void(0);"  onclick="myfunction()">  <i class="fa fa-bars"></i></a>
+                 
+            </div>
+    <div id="dropdown" class="dropdown-content"> 
+    <a href="#welco">Contact me </a> <a href="#try"> Try it </a> </div>
+           
+            
+        </div>
+        
+
+
+    </section>
+    <section name="welcome">
+        <div class="welco" id="welco">
+            <h1>OPS PDF Assistant</h1>
+            <h2> OPS PDF  is a ​💯​ free document ai powered app that  can help you to chat with your pdf app and generate anwers based on your pdf   </h2>
+            <div>
+                <div class="try">
+                    <a href="#chato">Try it 🚀</a>
+                
+            </div>
+        </div>
+
+    </section>
+    
+    <section name="main">
+        <div class="upload">
+        <div class="upload-text" id="welco">
+            <a href="">📤 Upload  your pdf </a>
+        </div>
+        <div class="upload-section" id="chato">
+              
+        <form action="/extract" method="post" enctype="multipart/form-data">
+       <input id="file" type="file" name="file">
+        <button class="button" type="submit">Upload</button>
+           </div>
+           <div>{{name}}</div>
+        </div>
+    </form>
+
+        </div>  
+     </section>
+     <section name="chat">
+        <div  class="chat-text" id="chat">
+            <a href="/chat">Chat with your assistant</a>
+        </div>
+        
+      
+           <style>
+        
+    </style>
+</head>
+<body>
+    <div class="chat">
+        <div class="messages" id="messages">
+            
+        </div>
+        
+        <div class="input-area">
+           
+            <input name="input-message" type="text" id="input" placeholder="Type a message..." onkeypress="if(event.key==='Enter') send()">
+            <button type="submit"  onclick="send()">Send</button>
+           
+        </div>
+    </div>
+
+     </section>
+     <footer>
+       
+        <div class="footer">
+            <p>Copyright © 2024 OPS PDF Assistant. All rights reserved.</p>
+        </div>
+     </footer>
+</body>

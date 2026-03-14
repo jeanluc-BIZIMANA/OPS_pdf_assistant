@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+
+<title>Basic menu</title>
+
+<!--
+The internal CSS should be transferred to an external file
+<link rel="stylesheet" href="screen.css" media="screen">
+-->
+
+<style media="screen">
+body {
+    background-color: #f0f0f0;
+    font: normal 1em / 1.62em sans-serif;
+ }
+
+#hamburger {
+    position: absolute;
+    left: -999em;
+ }
+
+#hamburger-icon {
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon::before{
+    display: inline-block;
+    content:'\02261';
+    font-size: 2em;
+    transition: 0.5s ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+ }
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+ }
+
+ul li {
+    margin: 0.5em;
+ }
+
+ul a {
+    display: block;
+    padding: 0.25em 0.5em;
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+ }
+
+@media ( max-width: 33em ) {
+#hamburger:checked ~ nav > ul {
+    height:auto;	
+ }
+
+#hamburger:checked ~ nav  #hamburger-icon::before{
+    transform: rotate( -90deg );	
+ }
+#hamburger-icon {
+    display: block;
+ }
+
+ul {
+    height:0;
+    overflow: hidden;
+    flex-direction: column; 
+ }
+
+ul li {
+    margin:  0  0 0.25em;
+ }
+}
+</style>
+
+</head>
+<body>
+
+<input type="checkbox" id="hamburger">
+
+<nav>
+ <ul>
+  <li>
+   <a href="painting-supplies.html">Painting Supplies</a>
+  </li>
+  <li>
+   <a href="organic-foods.html">Organic Foods</a>
+  </li>
+  <li>
+   <a href="english-literature.html">English Literature</a>
+  </li>
+ </ul>
+ <label id="hamburger-icon" for="hamburger"></label>	
+</nav>
+
+</body>
+</html>
